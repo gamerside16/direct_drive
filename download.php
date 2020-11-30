@@ -32,15 +32,16 @@ if(!isset($_GET['id']) or empty(trim($_GET['id']))){
 
     if(isset($_GET['act'])){
       if($_GET['act'] == 'download'){
-        header('Content-Description: File Transfer');
-        header('Content-Type: application/octet-stream');
-        header('Content-Disposition: attachment; filename="'.$dLogic['fileName'].'"');
-        header('Expires: 0');
-        header('Cache-Control: must-revalidate');
-        header('Pragma: public');
-        header('Content-Length: ' . $size_bytes);
-        readfile($dLogic['downloadUrl']);
-        exit;
+        //header('Content-Description: File Transfer');
+        //header('Content-Type: application/octet-stream');
+        //header('Content-Disposition: attachment; filename="'.$dLogic['fileName'].'"');
+        //header('Expires: 0');
+        //header('Cache-Control: must-revalidate');
+        //header('Pragma: public');
+        //header('Content-Length: ' . $size_bytes);
+        //readfile($dLogic['downloadUrl']);
+        header('location: '.$dLogic['downloadUrl'];
+        //exit;
       }
     }
 
